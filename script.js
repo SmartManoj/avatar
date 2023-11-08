@@ -152,7 +152,7 @@ vrm.springBoneManager.reset();
       ( error ) => console.error( error )
 
     );
-    alert('Now click me');
+    alert('wait for a minute and click the object');
 
   }
 
