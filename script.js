@@ -156,7 +156,7 @@ vrm.springBoneManager.reset();
   }
 
 // beware of CORS errors when using this locally. If you can't https, import the required libraries.
-load( 'https://automattic.github.io/VU-VRM/assets/VU-VRM.vrm' );
+load( 'https://smartmanoj.github.io/avatar/assets/vrm.vrm' );
 // load( 'C:\Users\smart\Desktop\\vrm.vrm' );
 // load('file:///C:/Users/smart/Desktop/vrm.vrm');
 
