@@ -152,6 +152,7 @@ vrm.springBoneManager.reset();
       ( error ) => console.error( error )
 
     );
+    alert('Now click me');
 
   }
 
