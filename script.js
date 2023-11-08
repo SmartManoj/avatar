@@ -156,7 +156,9 @@ vrm.springBoneManager.reset();
   }
 
 // beware of CORS errors when using this locally. If you can't https, import the required libraries.
-load( 'https://automattic.github.io/VU-VRM/assets/VU-VRM-elf.vrm' );
+load( 'https://automattic.github.io/VU-VRM/assets/VU-VRM.vrm' );
+// load( 'C:\Users\smart\Desktop\\vrm.vrm' );
+// load('file:///C:/Users/smart/Desktop/vrm.vrm');
 
 // grid / axis helpers
 //			const gridHelper = new THREE.GridHelper( 10, 10 );
