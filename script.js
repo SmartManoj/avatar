@@ -187,7 +187,7 @@ animate();
 
 function playAudio() {
   console.log("playAudio");
-  var audio = new Audio('https://smartmanoj.github.io/avatar/assets/a1.m4a');
+  var audio = new Audio('https://smartmanoj.github.io/avatar/assets/b2.m4a');
   audio.play();
   
 // mic listener - get a value
