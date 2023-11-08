@@ -17,7 +17,7 @@ if (localStorage.localvalues) {
   var bodymotion = Number(localStorage.bodymotion) ;
   var expression = Number(localStorage.expression) ;
 } else {
-  var mouththreshold = 10;
+  var mouththreshold = 5;
   var mouthboost = 10;
   var bodythreshold = 10;
   var bodymotion = 10;
@@ -34,7 +34,7 @@ document.body.appendChild(renderer.domElement);
 
 // camera
 const camera = new THREE.PerspectiveCamera( 30.0, window.innerWidth / window.innerHeight, 0.1, 20.0 );
-camera.position.set(0.0, 1.45, 0.75);
+camera.position.set(0.0, 1.45, 1.15);
 
 // camera controls
 const controls = new THREE.OrbitControls(camera, renderer.domElement);
@@ -185,16 +185,20 @@ renderer.render(scene, camera);
 
 animate();
 
+function playAudio() {
+  console.log("playAudio");
+  var audio = new Audio('https://smartmanoj.github.io/avatar/assets/a1.m4a');
+  audio.play();
+  
 // mic listener - get a value
-navigator.mediaDevices
-.getUserMedia({
-  audio: true
-})
-.then(
-  function (stream) {
+
     audioContext = new AudioContext();
     analyser = audioContext.createAnalyser();
-    microphone = audioContext.createMediaStreamSource(stream);
+    file = 'file:///c%3A/Users/smart/Desktop/GD/VU-VRM/assets/a1.m4a'
+    // microphone = audioContext.createMediaStreamSource(stream);
+    console.log('er')
+    microphone = audioContext.createMediaElementSource(document.getElementById('song1'));
+    
     javascriptNode = audioContext.createScriptProcessor(256, 1, 1);
 
     analyser.smoothingTimeConstant = 0.5;
@@ -238,10 +242,11 @@ if (talktime == true){
          var voweldamp = 53;
          var vowelmin = 12;
          if (inputvolume > (mouththreshold * 2)) {
+           r = ((average - vowelmin) / voweldamp) * (mouthboost/10)
+           console.log("err",i,r)
            currentVrm.blendShapeProxy.setValue(
              THREE.VRMSchema.BlendShapePresetName.A,
-             (
-              (average - vowelmin) / voweldamp) * (mouthboost/10)
+             r
            );
          
 }else{
@@ -376,11 +381,7 @@ lookAtTarget.position.x = camera.position.x;
 lookAtTarget.position.y = ((camera.position.y-camera.position.y-camera.position.y)/2)+0.5;
 
     }; // end fn stream
-  },
-  function (err) {
-    console.log("The following error occured: " + err.name);
   }
-);
 
 
 // blink

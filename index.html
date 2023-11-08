@@ -20,28 +20,10 @@
 <script src="https://unpkg.com/@pixiv/three-vrm@0.3.0/lib/three-vrm.js"></script>
 
 <script  src="./script.js"></script>
+<body onclick="playAudio()">Play Audio</button>
 
  <div class="backplate" id="backplate" >
-    <h1>VU-VRM</h1>
-      <h3>A simple mic-driven VRM client</h3>
-      <h4>Mic access required / Designed for use in OBS</h4>
-      <h4>Built for hands-free webcam-free inclusivity</h4>
-  
-    </div>
-
-    <div id="credits" class="credits" onclick="hideinfo()"> 
-      <p>v1.0 by itsTallulahhh</p>
-      <p>an Automattic Empathy</p>
-      <p>Microphone permission required</p>
-
-      <p>Click to dismiss</p>
-
-</div>
-
-    <div id="infobar" class="infobar" >
-      <p><small>Launch OBS with these arguments to use this as a Browser Source:</small></p>
-      <p><span class="highlight">--use-fake-ui-for-media-stream --allow-file-access-from-files</span></p>
-    </div>
+   
 
     <div class="interface" id="interface" onclick="interface()">
 
@@ -86,6 +68,15 @@
 
         
     </div> 
+    
+    <audio id="song1" controls autoplay style="display: none;">
+      <source src="file:///c%3A/Users/smart/Desktop/GD/VU-VRM/assets/a1.m4a" type="audio/ogg">
+    Your browser does not support the audio element.
+    </audio>
 
   </body>
   </html>
+  <script>
+    // zoom out 75%
+    // document.body.style.zoom = "75%"
+  </script>
