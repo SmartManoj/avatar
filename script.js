@@ -155,7 +155,7 @@ vrm.springBoneManager.reset();
     camera.position.z=1
     camera.position.y=1.
     camera.position.x=0
-    alert('wait for a minute and click the object');
+    alert('wait for a minute and click the object | v1');
 
   }
 
