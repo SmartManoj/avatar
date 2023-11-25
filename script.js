@@ -157,7 +157,8 @@ vrm.springBoneManager.reset();
   }
 
 // beware of CORS errors when using this locally. If you can't https, import the required libraries.
-load( 'https://smartmanoj.github.io/avatar/assets/vrm.vrm' );
+// load( 'https://smartmanoj.github.io/avatar/assets/vrm.vrm' );
+load( 'https://smartmanoj.github.io/avatar/assets/anu.vrm' );
 // load( 'C:\Users\smart\Desktop\\vrm.vrm' );
 // load('file:///C:/Users/smart/Desktop/vrm.vrm');
 
@@ -188,7 +189,7 @@ animate();
 
 function playAudio() {
   console.log("playAudio");
-  var audio = new Audio('https://smartmanoj.github.io/avatar/assets/b2.m4a');
+  var audio = new Audio('https://smartmanoj.github.io/avatar/assets/anu.mp3');
   audio.play();
   
 // mic listener - get a value
